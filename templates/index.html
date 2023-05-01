@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+
+    <h1>Customer Churn Prediction</h1>
+    {% if result %}
+        <p>{{ result }}</p> <br>
+		<a href="http://127.0.0.1:8080/">Predict Next Customer</a> <br>
+    {% endif %}
+	
+    <form method="post" action="/result.html">
+        <label>Tenure</label><br>
+        <input type="number" name="tenure"><br><br>
+
+        <label>NumberOfDeviceRegistered</label><br>
+        <input type="number" name="nod"><br><br>
+
+        <label>SatisfactionScore</label><br>
+        <input type="number" name="ss"><br><br>
+		
+		<label>Complain</label><br>
+        <input type="number" name="complain"><br><br>
+		
+		<label>DaySinceLastOrder</label><br>
+        <input type="number" name="dslo"><br><br>
+		
+		<label>CashbackAmount</label><br>
+        <input type="number" name="cba"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html>

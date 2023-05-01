@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction Result</title>
+</head>
+<body>
+
+    <h1>Customer Churn Prediction Result</h1>
+    {% if result %}
+        <p>Customer is likely to <strong>{{ result }} <strong> </p> <br>
+		<a href="http://127.0.0.1:8080/">Predict Next Customer</a> <br>
+    {% endif %}
+	
+</body>
+</html>
