@@ -15,7 +15,7 @@ app=Flask(__name__,template_folder='templates')
 def index():
     return render_template('index.html')
 
-@app.route("/result.html",methods=['POST'])
+@app.route("/predict",methods=['POST'])
 def predict_placement():
     tenure = float(request.form.get('tenure'))
     nod = int(request.form.get('nod'))
@@ -38,7 +38,7 @@ def predict_placement():
     else:
         result = 'Not Churn'
 
-    return render_template('result.html',result=result)
+    return render_template('index.html',result=result)
     #return result
 
 

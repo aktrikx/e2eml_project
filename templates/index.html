@@ -5,14 +5,13 @@
     <title>Customer Churn Prediction</title>
 </head>
 <body>
-
-    <h1>Customer Churn Prediction</h1>
+	<h1>Customer Churn Prediction</h1>
     {% if result %}
-        <p>{{ result }}</p> <br>
-		<a href="http://127.0.0.1:8080/">Predict Next Customer</a> <br>
+        <p>Customer is likely to <strong>{{ result }} <strong> </p> <br>
+		<a href='/'>Home</a> <br> <br>
     {% endif %}
 	
-    <form method="post" action="/result.html">
+    <form method="post" action="/predict">
         <label>Tenure</label><br>
         <input type="number" name="tenure"><br><br>
 
